@@ -19,6 +19,7 @@ function makeSound(key) {
     case "A":
     case "a":
       var clap = new Audio("sounds/clap.wav");
+      clap.currentTime = 0;
       clap.play();
       keyAnimation(key.toLowerCase());
       break;
@@ -26,6 +27,7 @@ function makeSound(key) {
     case "S":
     case "s":
       var hihat = new Audio("sounds/hihat.wav");
+      hihat.currentTime = 0;
       hihat.play();
       keyAnimation(key.toLowerCase());
       break;
@@ -33,12 +35,15 @@ function makeSound(key) {
     case "D":
     case "d":
       var kick = new Audio("sounds/kick.wav");
+      kick.currentTime = 0;
+      kick.play();
       keyAnimation(key.toLowerCase());
       break;
 
     case "F":
     case "f":
       var openhat = new Audio("sounds/openhat.wav");
+      openhat.currentTime = 0;
       openhat.play();
       keyAnimation(key.toLowerCase());
       break;
@@ -46,6 +51,7 @@ function makeSound(key) {
     case "G":
     case "g":
       var boom = new Audio("sounds/boom.wav");
+      boom.currentTime = 0;
       boom.play();
       keyAnimation(key.toLowerCase());
       break;
@@ -53,6 +59,7 @@ function makeSound(key) {
     case "H":
     case "h":
       var ride = new Audio("sounds/ride.wav");
+      ride.currentTime = 0;
       ride.play();
       keyAnimation(key.toLowerCase());
       break;
@@ -60,6 +67,7 @@ function makeSound(key) {
     case "J":
     case "j":
       var snare = new Audio("sounds/snare.wav");
+      snare.currentTime = 0;
       snare.play();
       keyAnimation(key.toLowerCase());
       break;
@@ -67,6 +75,7 @@ function makeSound(key) {
     case "K":
     case "k":
       var tom = new Audio("sounds/tom.wav");
+      tom.currentTime = 0;
       tom.play();
       keyAnimation(key.toLowerCase());
       break;
@@ -74,6 +83,7 @@ function makeSound(key) {
     case "L":
     case "l":
       var tink = new Audio("sounds/tink.wav");
+      tink.currentTime = 0;
       tink.play();
       keyAnimation(key.toLowerCase());
       break;
