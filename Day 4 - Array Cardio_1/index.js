@@ -76,22 +76,34 @@ var map_arr = inventors.map((inventor) => [inventor.first, inventor.last]);
 
 // Array.prototype.sort()
 // 3. Sort the inventors by birthdate, oldest to youngest
-var sort_arr = inventors.sort((a,b) => a.year - b.year);
+var sort_arr = inventors.sort((a, b) => a.year - b.year);
 //console.log(sort_arr);
 
 // Array.prototype.reduce()
 // 4. How many years did all the inventors live all together?
-var reduce_arr = inventors.reduce((total, inventor) => total + (inventor.passed - inventor.year), 0);
+var reduce_arr = inventors.reduce(
+  (total, inventor) => total + (inventor.passed - inventor.year),
+  0
+);
 //console.log(reduce_arr);
 
-
 // 5. Sort the inventors by years lived
-var years_lived = inventors.sort((a,b) => (a.passed - a.year) - (b.passed - b.year));
+var years_lived = inventors.sort(
+  (a, b) => a.passed - a.year - (b.passed - b.year)
+);
 //console.log(years_lived);
 
 // 6. Sort Exercise
 // Sort the people alphabetically by last name
-
+/*var alpha = people.sort(function(lastOne, nextOne){
+  var[aLast, aFirst] = lastOne.split(", ");
+  var[bLast, bFirst] = nextOne.split(", ");
+  return aLast > bLast ? -1 : 1;
+});*/
+var alpha = people.sort((lastOne, nextOne) =>
+  lastOne.split(", ") > nextOne.split(", ") ? -1 : 1
+);
+//console.log(alpha);
 
 // 7. Reduce Exercise
 // Sum up the instances of each of these
@@ -111,3 +123,13 @@ const data = [
   "car",
   "truck",
 ];
+
+const transportation = data.reduce((obj, item) => {
+  if (!obj[item]) {
+    obj[item] = 0;
+  }
+  obj[item]++;
+  return obj;
+}, {});
+
+console.log(transportation);
