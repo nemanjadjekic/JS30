@@ -1,9 +1,12 @@
-const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+const dogs = [
+  { name: "Snickers", age: 2 },
+  { name: "hugo", age: 8 },
+];
 
 function makeGreen() {
-  const p = document.querySelector('p');
-  p.style.color = '#BADA55';
-  p.style.fontSize = '50px';
+  const p = document.querySelector("p");
+  p.style.color = "#BADA55";
+  p.style.fontSize = "50px";
 }
 
 // Regular
@@ -37,12 +40,12 @@ console.log(p);
 console.dir(p);
 
 // Grouping together
-dogs.forEach(dog => {
-	console.group(`${dog.name}`);
-	console.log(`This is ${dog.name}`);
-	console.log(`${dog.name} is ${dog.age} years old.`);
-	console.log(`${dog.name} is ${dog.age * 7} dog years.`);
-	console.groupEnd(`${dog.name}`);
+dogs.forEach((dog) => {
+  console.group(`${dog.name}`);
+  console.log(`This is ${dog.name}`);
+  console.log(`${dog.name} is ${dog.age} years old.`);
+  console.log(`${dog.name} is ${dog.age * 7} dog years.`);
+  console.groupEnd(`${dog.name}`);
 });
 
 // counting
@@ -60,11 +63,11 @@ console.count("dog");
 // timing
 console.time("Fetching data");
 fetch("https://api.github.com/users/wesbos")
-	.then(data => data.json())
-	.then(data => {
-		console.timeEnd("Fetching data");
-		console.log(data);
-	});
+  .then((data) => data.json())
+  .then((data) => {
+    console.timeEnd("Fetching data");
+    console.log(data);
+  });
 
-// table	
+// table
 console.table(dogs);
